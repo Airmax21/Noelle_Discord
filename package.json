@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/Airmax21/Noelle_Discord#readme",
   "dependencies": {
-    "discord.js": "^14.1.1"
+    "@discordjs/rest": "^1.0.1",
+    "discord.js": "^14.1.1",
+    "dotenv": "^16.0.1"
   }
 }
