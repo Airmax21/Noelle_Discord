@@ -1,2 +1,2 @@
-# Noelle_Discord
-Bot Discord Noelle
+# Noelle Discord
+Noelle kini hadir di Discord
