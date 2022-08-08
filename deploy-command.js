@@ -13,16 +13,6 @@ const commands = [
         .setName('user')
         .setDescription('Menampilkan info user'),
     new SlashCommandBuilder()
-        .setName('yandere')
-        .setDescription('Mengirim gambar dari yandere')
-        .addStringOption(Option => Option
-            .setName('search')
-            .setDescription('Nama Chara / Genre yang dicari')
-            .setRequired(true))
-        .addIntegerOption(Option => Option
-            .setName('jumlah')
-            .setDescription('Jumlah gambar yang diinginkan')),
-    new SlashCommandBuilder()
         .setName('nhentai')
         .setDescription('Mengirim pdf dari nhentai')
         .addIntegerOption(Option => Option
