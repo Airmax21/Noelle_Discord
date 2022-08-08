@@ -20,7 +20,7 @@ module.exports = {
                 await axios.get('https://yande.re/post.json?limit=5000&tags=' + cari)
                     .then(async response => {
                         const imagecook = new MessageAttachment(response.data[Math.floor(Math.random()*response.data.length)]["jpeg_url"]);
-                        await interaction.replay({ attachment: [imagecook] })
+                        await interaction.reply({ attachment: [imagecook] })
                     })
             }
         }
