@@ -12,14 +12,14 @@ module.exports = {
             .setName('jumlah')
             .setDescription('Jumlah gambar yang diinginkan')),
     async execute(interaction) {
-        const chara = interaction.options.getString('search')
-        const jumlah = interaction.options.getInteger('jumlah')
-        var cari = chara.replace(/ /g, '_').toLowerCase()
+        const chara = interaction.options.getString('search'),
+            jumlah = interaction.options.getInteger('jumlah') || 1,
+            cari = chara.replace(/ /g, '_').toLowerCase()
         try {
             for (var i = 0; i < jumlah; i++) {
                 await axios.get('https://yande.re/post.json?limit=5000&tags=' + cari)
                     .then(async response => {
-                        const imagecook = new MessageAttachment(response.data[Math.floor(Math.random()*response.data.length)]["jpeg_url"]);
+                        const imagecook = new MessageAttachment(response.data[Math.floor(Math.random() * response.data.length)]["jpeg_url"]);
                         await interaction.reply({ attachment: [imagecook] })
                     })
             }
